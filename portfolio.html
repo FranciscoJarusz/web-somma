@@ -1,68 +1,85 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
+
   <title>Portfolio - SOMMA</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+  <body>
 
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="img/imagotipo_somma.png" alt="Logo Somma" class="logo-img">
+    <header>
+
+      <div class="navbar">
+
+            <div class="logo">
+
+                <a href="inicio.html">
+                    <img src="img/imagotipo_somma.png" alt="Logo Somma" class="logo-img">
+                </a>
+                
+            </div>
+
+        <nav>
+
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+
+        </nav>
+
       </div>
-      <nav>
-        <ul>
-          <li><a href="inicio.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="tabs-contenedor">
+    </header>
 
-    <input type="radio" name="tabs" id="tab-viviendas" checked>
-    <input type="radio" name="tabs" id="tab-comercios">
-    <input type="radio" name="tabs" id="tab-empresas">
+    <main class="tabs-contenedor">
 
-    <div class="tabs-menu">
-      <label for="tab-viviendas">VIVIENDAS</label>
-      <label for="tab-comercios">COMERCIOS</label>
-      <label for="tab-empresas">EMPRESAS</label>
-    </div>
+      <input type="radio" name="tabs" id="tab-viviendas" checked>
+      <input type="radio" name="tabs" id="tab-comercios">
+      <input type="radio" name="tabs" id="tab-empresas">
 
-    <!-- Sección Viviendas -->
-    <section class="tab-content viviendas">
-      <div 
-        class="viviendas-grid" id="viviendasContainer">
+      <div class="tabs-menu">
+        <label for="tab-viviendas">VIVIENDAS</label>
+        <label for="tab-comercios">COMERCIOS</label>
+        <label for="tab-empresas">EMPRESAS</label>
       </div>
-    </section>
 
-    <section class="tab-content comercios">
-      <div 
-      class="comercios-grid" id="comerciosContainer">
-      </div>
-    </section>
+      <section class="tab-content viviendas">
 
-    <section class="tab-content empresas">
-      <div 
-      class="empresas-grid" id="empresasContainer">
-      </div>
-    </section>
+        <div 
+          class="viviendas-grid" id="viviendasContainer">
+        </div>
+        
+      </section>
 
-  </main>
+      <section class="tab-content comercios">
+        <div 
+        class="comercios-grid" id="comerciosContainer">
+        </div>
+      </section>
 
-  <footer>
-    <p>Dirección: Av. Victorica 4924, CP B1744, Moreno, Buenos Aires Tel. / Fax: 0237 4683291 | 4883209 Tel. 011 6914808 | Cel. 15 5458 6876 Email: luis@arqsomma.com.ar</p>
-  </footer>
+      <section class="tab-content empresas">
+        <div 
+        class="empresas-grid" id="empresasContainer">
+        </div>
+      </section>
 
-  <script type="module" src="viviendas.js"></script>
-  <script type="module" src="comercios.js"></script>
-  <script type="module" src="empresas.js"></script>
-</body>
+    </main>
+
+      <footer id = "contacto">
+          <p>Dirección: Av. Victorica 4924, CP B1744, Moreno, Buenos Aires Tel. / Fax: 0237 4683291 | 4883209 Tel. 011 6914808 | Cel. 15 5458 6876 Email: luis@arqsomma.com.ar</p>
+      </footer>
+
+    <script type="module" src="viviendas.js"></script>
+    <script type="module" src="comercios.js"></script>
+    <script type="module" src="empresas.js"></script>
+
+  </body>
 </html>
