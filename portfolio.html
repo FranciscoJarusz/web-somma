@@ -26,12 +26,10 @@
 
   <main class="tabs-contenedor">
 
-    <!-- Radios ocultos -->
     <input type="radio" name="tabs" id="tab-viviendas" checked>
     <input type="radio" name="tabs" id="tab-comercios">
     <input type="radio" name="tabs" id="tab-empresas">
 
-    <!-- Menú de pestañas -->
     <div class="tabs-menu">
       <label for="tab-viviendas">VIVIENDAS</label>
       <label for="tab-comercios">COMERCIOS</label>
@@ -40,50 +38,21 @@
 
     <!-- Sección Viviendas -->
     <section class="tab-content viviendas">
-      <div class="galeria-css">
-        <!-- Sliders como ya tenías -->
-        <input type="radio" name="slider" id="slide1" checked>
-        <input type="radio" name="slider" id="slide2">
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
-        <input type="radio" name="slider" id="slide5">
-
-        <div class="slides">
-          <div class="slide s1"><img src="img/casac1.jpg" alt="Imagen 1"></div>
-          <div class="slide"><img src="img/casac2.jpg" alt="Imagen 2"></div>
-          <div class="slide"><img src="img/casac3.jpg" alt="Imagen 3"></div>
-          <div class="slide"><img src="img/casac4.jpg" alt="Imagen 4"></div>
-          <div class="slide"><img src="img/casac5.jpg" alt="Imagen 5"></div>
-        </div>
-
-        <div class="navigation-manual">
-          <label for="slide1" class="manual-btn"></label>
-          <label for="slide2" class="manual-btn"></label>
-          <label for="slide3" class="manual-btn"></label>
-          <label for="slide4" class="manual-btn"></label>
-          <label for="slide5" class="manual-btn"></label>
-        </div>
-
-        <div class="descripcion-casac">
-          <h2>CASA COUNTRY</h2>
-          <p>Tarea: Proyecto, dirección y construcción.</p>
-          <p>Ubicación: Country Club Banco Provincia, Francisco Álvarez.</p>
-          <p>Superficie: 310 m².</p>
-          <p>Período de ejecución: Año 2016</p>
-        </div>
+      <div 
+        class="viviendas-grid" id="viviendasContainer">
       </div>
     </section>
 
-    <!-- Sección Comercios -->
     <section class="tab-content comercios">
-      <h2>Comercios</h2>
-      <p>Contenido de comercios aquí...</p>
+      <div 
+      class="comercios-grid" id="comerciosContainer">
+      </div>
     </section>
 
-    <!-- Sección Empresas -->
     <section class="tab-content empresas">
-      <h2>Empresas</h2>
-      <p>Contenido de empresas aquí...</p>
+      <div 
+      class="empresas-grid" id="empresasContainer">
+      </div>
     </section>
 
   </main>
@@ -92,5 +61,8 @@
     <p>Dirección: Av. Victorica 4924, CP B1744, Moreno, Buenos Aires Tel. / Fax: 0237 4683291 | 4883209 Tel. 011 6914808 | Cel. 15 5458 6876 Email: luis@arqsomma.com.ar</p>
   </footer>
 
+  <script type="module" src="viviendas.js"></script>
+  <script type="module" src="comercios.js"></script>
+  <script type="module" src="empresas.js"></script>
 </body>
 </html>
