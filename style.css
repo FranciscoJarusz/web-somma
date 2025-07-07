@@ -91,6 +91,42 @@ footer {
     padding: 1rem;
 }
 
+footer#contacto {
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+footer#contacto a {
+  color: white;
+  text-decoration: none;
+}
+
+footer#contacto a:hover {
+  color: #e5c359;
+  text-decoration: underline;
+}
+
+.icono {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+  margin-right: 8px;
+}
+
+.linea-footer {
+  margin: 20px auto 10px auto;
+  width: 37%;
+  border: 0;
+  height: 1px;
+  background-color: #e5c359; /* línea dorada */
+}
+
+footer .copyright {
+  font-size: 0.9em;
+  color: #FFFFFF;
+}
+
 /* ------------------------------------------------------------------ NOSOTROS ------------------------------------------------------------------ */
 
 .grid-nosotros {
@@ -98,25 +134,46 @@ footer {
     grid-template-columns: 200px 1fr;
     gap: 2rem;
     max-width: 1000px;
-    margin: 2rem auto;
-    font-family: 'Montserrat', sans-serif;
+    margin: auto;
     color: white;
     align-items: center; 
 }
 
+.grid-nosotros .galeria {
+    grid-column: 1 / 3;
+    margin-bottom: 2rem;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.galeria img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
 .grid-nosotros .imagen-lj img {
+    grid-column: 1 / 2;
+    grid-row: 2;
     width: 200px;
     border-radius: 20px;
 }
 
 .grid-nosotros .desc-personal {
     grid-column: 2 / 3;
-    grid-row: 1;
+    grid-row: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin-top: -10px;
 }
 
 .grid-nosotros .somma,
@@ -131,52 +188,6 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.galeria {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: nowrap; 
-}
-
-.galeria img {
-    width: 300px;          
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-    display: block;
-}
-
-.grid-nosotros .respetar {
-  grid-column: 1 / 2;
-}
-
-.grid-nosotros .interpretar {
-  grid-column: 2 / 3;
-}
-
-.contenedor-valores {
-    grid-column: 1 / 3;
-    margin: 2rem 1 0;
-    padding: 0;
-}
-
-.valores {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.25rem 2rem;
-}
-
-.valores p {
-  margin: 0;
-  font-weight: bold;
-  color: #e5c359;
-  text-align: center;
-  white-space: nowrap;
-  flex: 1 1 auto;
-  font-size: clamp(0.65rem, 0.9vw, 0.85rem);
-}
 
 /* ------------------------------------------------------------------ SERVICIOS ------------------------------------------------------------------ */
 
