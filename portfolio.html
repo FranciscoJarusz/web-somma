@@ -3,15 +3,21 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <title>Portfolio - SOMMA</title>
+    <title>Portfolio - SOMMA</title>
+    
+    <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon_somma.png">
 </head>
 
   <body>
 
+    <div id="preloader">
+        <img src="img/imagotipo_somma.png" alt="Cargando..." class="logo-loader" />
+    </div>
+        
     <header>
 
       <div class="navbar">
@@ -74,39 +80,58 @@
     </main>
 
     <footer id="contacto">
+      <div class="footer-contenedor">
 
-        <p>
-            <a href="https://maps.app.goo.gl/ELtyvX7Svx6j5Yjp6" target="_blank">
+        <div class="footer-item">
+          <a href="https://maps.app.goo.gl/ELtyvX7Svx6j5Yjp6" target="_blank">
             <img src="img/icon_ubicacion.png" class="icono" width="20" height="20">
             Av. Victorica 4924, CP B1744, Moreno, Buenos Aires
-            </a><br>
+          </a>
+        </div>
 
-            <img src="img/icon_telefono.png" class="icono" width="20" height="20">
-            0237 4683291 | 0237 4883209
+        <div class="footer-item">
+          <img src="img/icon_telefono.png" class="icono" width="20" height="20">
+          0237 4683291 | 0237 4883209 | +54 9 11 5458 6876
+        </div>
 
-            <img src="img/celular.png" width="16" height="16">
-            +54 9 11 5458 6876<br>
-
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=luis@arqsomma.com.ar" 
+        <div class="footer-item">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=luis@arqsomma.com.ar" 
             target="_blank" 
             class="enlace-blanco">
             <img src="img/icon_email.png" class="icono" width="20" height="20">
             luis@arqsomma.com.ar
-            </a>
-            
-        </p>
+          </a>
+        </div>
 
-          <hr class="linea-footer">
+        <hr class="linea-footer">
 
         <div class="copyright">
-            <p>© Copyright 2025, SOMMA ARQUITECTURA + CONSTRUCCIÓN. Todos los derechos reservados.</p>
+          <p>© Copyright 2025, SOMMA ARQUITECTURA + CONSTRUCCIÓN. Todos los derechos reservados.</p>
         </div>
-  
+
+      </div>
     </footer>
 
     <script type="module" src="viviendas.js"></script>
     <script type="module" src="comercios.js"></script>
     <script type="module" src="empresas.js"></script>
+
+    <script>
+      window.addEventListener('load', function () {
+        const preloader = document.getElementById('preloader');
+
+        // Espera 1000ms (1 segundos) después de que la página haya cargado
+        setTimeout(() => {
+          preloader.style.opacity = '0';
+          preloader.style.transition = 'opacity 0.05s ease';
+
+          // Luego de que termine la transición, lo ocultamos completamente
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 500); // este valor debe coincidir con la duración de la transición
+        }, 1000);
+      });
+    </script>
 
   </body>
   
