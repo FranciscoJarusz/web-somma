@@ -87,6 +87,7 @@
     </main>
 
     <footer id="contacto">
+
       <div class="footer-contenedor">
 
         <div class="footer-item">
@@ -117,24 +118,11 @@
         </div>
 
       </div>
+
     </footer>
 
-    <script>
-      window.addEventListener('load', function () {
-        const preloader = document.getElementById('preloader');
+    <script src="animaciones.js"></script>
 
-        // Espera 1000ms (1 segundos) después de que la página haya cargado
-        setTimeout(() => {
-          preloader.style.opacity = '0';
-          preloader.style.transition = 'opacity 0.05s ease';
-
-          // Luego de que termine la transición, lo ocultamos completamente
-          setTimeout(() => {
-            preloader.style.display = 'none';
-          }, 500); // este valor debe coincidir con la duración de la transición
-        }, 1000);
-      });
-    </script>
   </body>
 
 </html>

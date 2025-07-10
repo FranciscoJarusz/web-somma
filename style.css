@@ -1,4 +1,5 @@
-/* Pantalla de fondo completa */
+/* ------------------------------------------------------------------ PRE-LOADER ------------------------------------------------------------------ */
+
 #preloader {
     position: fixed;
     top: 0;
@@ -12,9 +13,8 @@
     z-index: 9999;
 }
 
-/* Logo con animación de titilar */
 .logo-loader {
-    width: 500px; /* Ajustá al tamaño deseado */
+    width: 200px;
     animation: blink 1s ease-in-out infinite;
 }
 
@@ -26,6 +26,19 @@
     50% {
         opacity: 0.2;
     }
+}
+
+/* ------------------------------------------------------------------ ANIMACIÓN AL SCROLLEAR ------------------------------------------------------------------ */
+
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ------------------------------------------------------------------ GENERAL ------------------------------------------------------------------ */
@@ -75,12 +88,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 250px;
 }
 
 .logo-img {
-    width: 250px;
+    width: 200px;
     height: auto;
     display: block;
 }
@@ -118,7 +131,7 @@ section {
 footer {
     background-color: #1a1918;
     color: white;
-    text-align: center; /* Esto aplica al footer general */
+    text-align: center;
     padding: 1rem;
 }
 
@@ -129,7 +142,7 @@ footer#contacto {
 }
 
 .footer-item {
-    margin-bottom: 12px; /* o más si quieres más separación */
+    margin-bottom: 12px;
     text-align: center;
     margin-top: 15px;
 }
@@ -156,7 +169,7 @@ footer#contacto {
     width: 37%;
     border: 0;
     height: 1px;
-    background-color: #e5c359; /* línea dorada */
+    background-color: #e5c359;
 }
 
 footer .copyright {
@@ -315,7 +328,7 @@ footer .copyright {
   justify-content: center;
   gap: 2rem; 
   background-color: #1c1b1b;
-  top: 75px;
+  top: 70px;
   position: fixed;
   width: 100%;   
   z-index: 999;
@@ -360,25 +373,11 @@ footer .copyright {
   color: #e5c359;
 }
 
-.viviendas-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  width: 100%;
-}
-
-.comercios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  width: 100%;
-}
-
+.viviendas-grid,
+.comercios-grid,
 .empresas-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 2rem;
   justify-items: center;
   width: 100%;
