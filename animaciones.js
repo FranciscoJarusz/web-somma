@@ -16,27 +16,35 @@ window.addEventListener('load', function () {
 /* ------------------------------------------------------------------ ANIMACIÓN AL SCROLLEAR ------------------------------------------------------------------ */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elementos = document.querySelectorAll('.somma, .estudio, .exp-comp');
-
-  elementos.forEach(el => {
-    el.classList.add('scroll-anim');
-  });
+  const secciones = document.querySelectorAll('.scroll-section');
 
   const options = {
     threshold: 0.1
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
-    });
-  }, options);
+  setTimeout(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const hijos = entry.target.querySelectorAll('*');
 
-  elementos.forEach(el => {
-    observer.observe(el);
-  });
+        if (entry.isIntersecting) {
+          hijos.forEach((hijo, index) => {
+            setTimeout(() => {
+              hijo.classList.add('visible');
+            }, index * 30);
+          });
+        } else {
+
+          hijos.forEach(hijo => {
+            hijo.classList.remove('visible');
+          });
+        }
+      });
+    }, options);
+
+    secciones.forEach(section => {
+      observer.observe(section);
+    });
+
+  }, 1000);
 });
