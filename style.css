@@ -18,7 +18,6 @@
     animation: blink 1s ease-in-out infinite;
 }
 
-/* Animación de titilar */
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -93,7 +92,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 0 150px;
+    padding: 0 370px;
 }
 
 .logo-img {
@@ -102,7 +101,6 @@ header {
     display: block;
 }
 
-/* Navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -121,13 +119,6 @@ nav a:visited {
 nav a:hover {
     color: #e5c359;
     transition: color 0.3s ease;
-}
-
-/* ------------------------------------------------------------------ SECCIONES ------------------------------------------------------------------ */
-
-section {
-    padding: 2rem;
-    width: 100%;
 }
 
 /* ------------------------------------------------------------------ FOOTER ------------------------------------------------------------------ */
@@ -184,8 +175,6 @@ footer .copyright {
 /* ------------------------------------------------------------------ NOSOTROS ------------------------------------------------------------------ */
 
 .banner-nosotros {
-  width: 100%;
-  height: 40vh;
   overflow: hidden;
   margin-top: -10px;
   margin-bottom: 10px;
@@ -193,7 +182,7 @@ footer .copyright {
 
 .banner-nosotros img {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   object-fit: cover;
 }
 
@@ -201,7 +190,6 @@ footer .copyright {
   background-color: #202020;
   color: white;
   padding: 4rem 2rem;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .contenido {
@@ -209,13 +197,15 @@ footer .copyright {
   align-items: center;
   justify-content: center;
   max-width: 1200px;
-  gap: 70px;
+  gap: 200px;
   margin: 0 auto;
+  margin-bottom: 200px;
   padding: 0 1rem;
 }
 
 .texto-nosotros {
-  width: 600px;
+  text-wrap: wrap;
+  width: 800px;
   font-size: 0.85rem;
   line-height: 1.5;
 }
@@ -227,6 +217,7 @@ footer .copyright {
 }
 
 .galeria-vertical {
+  /* min-width: 200px; */
   width: 200px;
   margin-left: 60px;
   display: flex;
@@ -242,6 +233,75 @@ footer .copyright {
   display: block;
 }
 
+.proyectos-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.lista {
+  flex: 1;
+  border-bottom: 1px solid #e5c359;
+  width: 600px;
+}
+
+.imagen-proyecto img {
+  transition: transform 0.8s ease;
+  width: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+.lista-titulo {
+  cursor: pointer;  
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.lista-contenedor {
+  text-wrap: wrap;
+  width: 600px;
+  font-size: 16px;
+}
+
+.lista-titulo::after {
+  content: "+";
+}
+
+.lista.abierta .lista-titulo {
+  color: #e5c359;
+  transition: color 0.5s ease;
+}
+
+.lista.abierta .lista-titulo::after {
+  content: "-";
+  color: #e5c359;
+  transition: color 0.5s ease;
+}
+
+.lista.abierta ~ .imagen-proyecto img {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.lista-contenedor {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease;
+}
+
+.lista.abierta .lista-contenedor {
+  max-height: 700px;
+}
 
 /* ------------------------------------------------------------------ SERVICIOS ------------------------------------------------------------------ */
 

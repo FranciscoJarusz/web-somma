@@ -48,3 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }, 1000);
 });
+
+const detalles = document.querySelector(".lista");
+const resumen = detalles.querySelector(".lista-titulo");
+
+resumen.addEventListener("click", () => {
+  detalles.classList.toggle("abierta");
+});
